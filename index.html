@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background-color: #000;
+        }
+
+        .main-block {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main-visual {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main-visual-inner {
+            border: 1px dotted red;
+            min-width: 400px;
+            min-height: 640px;
+            background-image: url('1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        input {
+            margin-right: 20px;
+            padding: 10px;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="main-block">
+            <input id="inp" type="text">
+            <input type="submit" value="Visualize" onclick="visualize()">
+        </div>
+        <div class="main-visual">
+            <div class="main-visual-inner">
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        const inp = document.querySelector('#inp'),
+            visualBox = document.querySelector('.main-visual-inner');
+
+        function visualize() {
+            let inpText = inp.value;
+
+            console.log(inpText);
+
+            if (inpText === "0") {
+                visualBox.style.backgroundImage = "url('0.jpg')";
+            } else if (inpText === "1") {
+                visualBox.style.backgroundImage = "url('1.jpg')";
+            } else if (inpText === "2") {
+                visualBox.style.backgroundImage = "url('2.jpg')";
+            } else if (inpText === "3") {
+                visualBox.style.backgroundImage = "url('3.jpg')";
+            } else if (inpText === "4") {
+                visualBox.style.backgroundImage = "url('4.jpg')";
+            } else if (inpText === "5") {
+                visualBox.style.backgroundImage = "url('5.jpg')";
+            } else if (inpText === "6") {
+                visualBox.style.backgroundImage = "url('6.jpg')";
+            } else if (inpText === "7") {
+                visualBox.style.backgroundImage = "url('7.jpg')";
+            } else if (inpText === "8") {
+                visualBox.style.backgroundImage = "url('8.jpg')";
+            } else if (inpText === "9") {
+                visualBox.style.backgroundImage = "url('9.jpg')";
+            } else {
+                visualBox.style.backgroundImage = "url('warning.png')";
+                alert("You can enter only numbers from '0' to '9'");
+            }
+        }
+    </script>
+</body>
+
+</html>
