@@ -47,14 +47,24 @@
             padding: 10px;
             background-color: #ccc;
         }
+
+        p {
+            color: #fff;
+            display: block;
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
     </style>
 </head>
 
 <body>
     <div class="main">
         <div class="main-block">
-            <input id="inp" type="text">
-            <input type="submit" value="Visualize" onclick="visualize()">
+            <div class="main-block-inner">
+                <p>Enter numbers from '0' to '9':</p>
+                <input id="inp" type="text">
+                <input type="submit" value="Visualize" onclick="visualize()">
+            </div>
         </div>
         <div class="main-visual">
             <div class="main-visual-inner">
